@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_caracter.c                               :+:      :+:    :+:   */
+/*   ft_printf_pontier.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enalvare <enalvare@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/17 17:46:36 by enalvare          #+#    #+#             */
-/*   Updated: 2025/01/30 19:42:49 by enalvare         ###   ########.fr       */
+/*   Created: 2025/01/30 15:16:07 by enalvare          #+#    #+#             */
+/*   Updated: 2025/01/30 19:44:43 by enalvare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_caracter(char c)
+void	ft_printf_pontier(void *c)
 {
-	write(1, &c, 1);
-	return (1);
+	unsigned long	a;
+
+	a = (unsigned long)c;
+	if (!a)
+	{
+		write(1, "(nil)", 5);
+	}
+	else
+	{
+		ft_printf_string("0x");
+		ft_print_hex(a, 'x');
+	}
 }
 
 /*int	main(void)
 {
-	char	a;
+	void	*ptr;
+	char		var;
 
-	a = 'A';
-	ft_printf_caracter(a);
-	ft_printf_caracter('\n');
-	printf("%c", a);
-	return (0);
+	ptr = &var;
+	ft_printf_pontier(ptr);
+	printf("\n");
+	printf("%p", ptr);
+	return(0);
 }*/

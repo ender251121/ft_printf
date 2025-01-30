@@ -6,13 +6,11 @@
 /*   By: enalvare <enalvare@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 18:19:05 by enalvare          #+#    #+#             */
-/*   Updated: 2025/01/17 19:07:50 by enalvare         ###   ########.fr       */
+/*   Updated: 2025/01/30 19:43:22 by enalvare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <string.h>
-#include <unistd.h>
 
 int	ft_printf_string(char *c)
 {
@@ -33,5 +31,7 @@ int	ft_printf_string(char *c)
 
 	a = "hola";
 	ft_printf_string(a);
+	ft_printf_string("\n");
+	printf("%s", a);
 	return (0);
 }*/

@@ -6,12 +6,12 @@
 #    By: enalvare <enalvare@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/17 17:03:21 by enalvare          #+#    #+#              #
-#    Updated: 2025/01/17 19:08:42 by enalvare         ###   ########.fr        #
+#    Updated: 2025/01/30 19:39:03 by enalvare         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # ARCHIVO FUENTE
-SRC = ft_printf_caracter.c ft_printf_string.c
+SRC = ft_printf_caracter.c ft_printf_string.c ft_printf_hex.c ft_printf_ent.c ft_printf_pontier.c
 #GENERAR EL ARCHIVO OBJETO DE CADA ARCHIVO FUENTE
 OBJS = $(SRC:.c=.o)
 
